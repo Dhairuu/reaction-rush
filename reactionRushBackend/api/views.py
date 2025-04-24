@@ -65,38 +65,37 @@ class LoginUserView(APIView):
 
         return res
 
-
 class NewMatchDataView(APIView):
     def post(self, request):
         print(request.data)
         try:
             user_id= int(request.data["user_id"])
             target_hit = int(request.data["target_hit"])
-            score = float(request.data["target_hit"])
+            score = float(request.data["score"])
             accuracy = float(request.data["accuracy"])
             data = {
-    "user_id": user_id,
-    "target_hit": target_hit,
-    "score": score,
-    "accuracy": accuracy,
-}
+                 "user_id": user_id,
+                 "target_hit": target_hit,
+                 "score": score,
+                 "accuracy": accuracy,
+             }
             new_match_data = MatchSerializer(data = data, many = False)
-            print(new_match_data)
             if new_match_data.is_valid():
                 new_match = new_match_data.save()
 
-                user = User.objects.get(id = new_match.user_id)
+                user = new_match.user_id
 
                 if new_match.score > user.high_score:
                     user.high_score = new_match.score
                     user.save()
- 
+                    print("High score updated")
+
                 return Response(new_match_data.data, status = status.HTTP_201_CREATED)
             else:
                 return Response(new_match_data.errors, status=status.HTTP_400_BAD_REQUEST)
         except Exception as e:
             return Response({'ERROR': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-        
+         
 class UserProgressionView(APIView):
     def post(self, request):
         user_id = request.COOKIES.get('user_id')
