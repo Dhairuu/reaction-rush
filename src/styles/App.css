@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+    padding: 1rem;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #000000;
+    /* background-image: ; */
+    color: #fff;
+    min-height: 100vh;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+  }

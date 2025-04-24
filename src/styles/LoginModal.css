@@ -1,0 +1,59 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .modal-content {
+    background: #1e1e2f;
+    padding: 2rem;
+    border: 2px solid #f5d300;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .modal-input {
+    display: block;
+    margin: 10px auto;
+    padding: 0.5rem;
+    width: 80%;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #282c34;
+    color: white;
+    border: 1px solid #f5d300;
+  }
+  
+  .modal-submit {
+    background-color: #f5d300;
+    color: #1e1e2f;
+    font-family: 'Press Start 2P', cursive;
+    padding: 0.5rem 1rem;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+  
+  .toggle-mode {
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  

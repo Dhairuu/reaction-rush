@@ -1,0 +1,47 @@
+.game-container {
+  grid-column: span 2;
+  text-align: center;
+}
+
+.pixel-font {
+  font-family: "Press Start 2P", cursive;
+}
+
+.game-area {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  background-color: #1e1e2f;
+  border-radius: 5px;
+  border: 3px solid yellow;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+.yellow {
+  color: rgb(255, 213, 0);
+}
+
+.faded-yellow {
+  color: rgb(255, 255, 118);
+}
+
+.flex-boxA {
+  display: flex;
+  gap: 4rem;
+  justify-content: space-evenly;
+  /* border: 2px solid red; */
+}
+
+.profile-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-icon {
+  border-radius: 50%;
+  height: 100px;
+  aspect-ratio: 1;
+}

@@ -1,0 +1,14 @@
+.user-progress {
+    background-color: #bbbbbb;
+    padding: 1rem;
+    border: 2px solid #fff;
+    border-radius: 8px;
+  }
+
+  .yellow {
+    color: rgb(255, 213, 0);
+  }
+  
+  .faded-yellow {
+    color: rgb(255, 255, 149);
+  }
